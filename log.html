@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject Log | Neuro-Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="main-menu">
+        <a href="index.html">The Lab</a>
+        <a href="library.html">Chemical Library</a>
+        <a href="log.html">Subject Log</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <h1 id="main-title">Observation Log</h1>
+
+    <div id="dashboard-wrapper">
+        <section id="controls" style="flex: 0 0 600px;">
+            <h3 class="gta-sub">Clinical Notes</h3>
+            <form id="clinical-form">
+                <label>Subject ID:</label>
+                <input type="text" id="subject-id" placeholder="Enter ID...">
+
+                <p>Detailed Observations:</p>
+                <textarea id="notes" rows="6" style="width: 100%; background: #1a1f29; color: white; border: 1px solid #4db8ff; padding: 10px;"></textarea>
+
+                <p>Observed Physiological Responses:</p>
+                <input type="checkbox" id="c1" class="effect-check" value="Tachycardia"> <label for="c1">Tachycardia(very fast heart beat)</label><br>
+                <input type="checkbox" id="c2" class="effect-check" value="Mydriasis"> <label for="c2">Mydriasis (Pupil Dilation)</label><br>
+                <input type="checkbox" id="c3" class="effect-check" value="Neural Tremor"> <label for="c3">Neural Tremor(body parts shaking)</label><br>
+                <input type="checkbox" id="c4" class="effect-check" value="Sedation"> <label for="c4">Sedating effects</label><br>
+                <input type="checkbox" id="c5" class="effect-check" value="Psychosis"> <label for="c5">Signs of possible psychosis(paranoia, hallucinations etc.)</label><br>
+                <input type="checkbox" id="c6" class="effect-check" value="Aggression"> <label for="c6">Signs of aggression</label><br>
+                <input type="checkbox" id="c7" class="effect-check" value="Muscle"> <label for="c7">Muscle spasms</label><br>
+                <input type="checkbox" id="c8" class="effect-check" value="anxiety"> <label for="c3">Anxiety reduction, talkativeness</label><br>                
+                <br><br>
+                <button type="button" id="save-btn">Log Observation</button>
+            </form>
+
+            <div id="log-display-area" style="margin-top: 30px; border-top: 1px solid #4db8ff; padding-top: 20px;">
+                <h4 class="gta-sub" style="font-size: 1.2rem;">Live Session History</h4>
+                <div id="log-results">
+                    </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

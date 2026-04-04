@@ -1,0 +1,243 @@
+
+@font-face {
+    font-family: 'GTAFont';
+    src: url('pricedown.otf'); 
+}
+
+body {
+    background-color: #0b0e14; 
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter' ,'Segoe UI', Roboto, Helvetica,  Arial, sans-serif;
+}
+
+h3, p, label {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+#main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #1a1f29;
+    border-bottom: 2px solid #4db8ff;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+
+#main-menu a {
+    color: #4db8ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#main-menu a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+
+@keyframes titleGlow {
+    0% { text-shadow: 0 0 10px #4db8ff, 0 0 20px #4db8ff; }
+    50% { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+    100% { text-shadow: 0 0 10px #4db8ff, 0 0 20px #4db8ff; }
+}
+
+#main-title {
+    font-family: 'GTAFont', sans-serif; 
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    color: #4db8ff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+    animation: titleGlow 3s infinite;
+}
+
+
+#dashboard-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 60vh;
+}
+
+
+#controls {
+    flex: 0 0 320px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(77, 184, 255, 0.3);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+#visual-center {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+label, th, .subtitle {
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #4db8ff; 
+}
+
+.data-zone {
+    flex: 0 0 250px; 
+    padding: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+#con-zone {
+    border-right: 2px solid #ff4444; 
+    text-align: right;
+    color: #ffcccc;
+}
+
+#pro-zone {
+    border-left: 2px solid #00ff88; 
+    text-align: left;
+    color: #ccffcc;
+}
+
+#skull-container {
+    flex: 0 0 350px;
+    position: relative;
+    width: 350px;
+}
+
+#skull-svg {
+    width: 100%;
+    filter: drop-shadow(0 0 20px #4db8ff);
+    opacity: 0.8;
+}
+
+
+@keyframes flash {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+.neuron-fire {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    z-index: 10;
+    pointer-events: none;
+    animation: flash 0.8s ease-out forwards;
+}
+
+
+#run-btn {
+    background: linear-gradient(45deg, #007acc, #4db8ff);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(77, 184, 255, 0.6);
+    transition: 0.4s;
+    cursor: pointer;
+    width: 100%;
+}
+
+#run-btn:hover {
+    box-shadow: 0 0 25px #4db8ff, 0 0 40px #00ff00;
+    transform: scale(1.05);
+}
+
+
+.error-border {
+    border: 2px solid red !important;
+}
+
+
+#chem-table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #1a1f29;
+}
+
+#chem-table th, #chem-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #4db8ff;
+}
+
+#chem-table th {
+    background-color: #4db8ff;
+    color: #0b0e14;
+    text-transform: uppercase;
+}
+
+#skull-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px #4db8ff);
+    opacity: 0.9;
+    display: block;
+}
+
+#skull-container{
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.eye {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #4db8ff; 
+    border-radius: 50%;
+    box-shadow: 
+        0 0 5px #fff,           
+        0 0 10px #00e5ff,       
+        0 0 20px #00e5ff,        
+        0 0 40px #00e5ff;        
+    z-index: 5;
+    
+    
+}
+
+
+.left-eye {
+    top: 42%; 
+    left: 36%;
+}
+
+.right-eye {
+    top: 42%;
+    left: 63%;
+}
+
+@keyframes eyePulse {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Simulator | Neuro-Lab</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .subtitle {
+            text-align: center;
+            color: #4db8ff;
+            font-family: 'Segoe UI', sans-serif;
+            letter-spacing: 1px;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="main-menu">
+        <a href="index.html">The Lab</a>
+        <a href="library.html">Chemical Library</a>
+        <a href="log.html">Subject Log</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <header>
+        <h1 id="main-title">Synaptic State Simulator</h1>
+        <p class="subtitle">Computational Neuro-Analysis</p>
+    </header>
+
+    <div id="dashboard-wrapper">
+        
+        <section id="controls">
+            <h3 class="gta-sub">Simulation Parameters</h3>
+            
+            <form id="neuro-form">
+                <div class="field-group">
+                    <label for="user-name">Subject Name:</label>
+                    <input type="text" id="user-name" name="user-name" placeholder="Enter ID...">
+                </div>
+
+                <div class="field-group">
+                    <p>Select Substance:</p>
+                    <input type="radio" name="substance" value="caffeine" id="caf" checked> 
+                    <label for="caf">Caffeine</label><br>
+                    
+                    <input type="radio" name="substance" value="alcohol" id="alc"> 
+                    <label for="alc">Alcohol</label><br>
+                    
+                    <input type="radio" name="substance" value="nicotine" id="nic"> 
+                    <label for="nic">Nicotine</label><br>
+                    
+                    <input type="radio" name="substance" value="dopamine_agonist" id="dopa"> 
+                    <label for="dopa">L-Dopa</label><br>
+                    
+                    <input type="radio" name="substance" value="serotonin_boost" id="sero"> 
+                    <label for="sero">SSRI</label>
+                </div>
+
+                <div class="field-group">
+                    <p>Effect Color:</p>
+                    <input type="color" id="chem-color" value="#4db8ff">
+                </div>
+
+                <div class="field-group">
+                    <p>Log Date:</p>
+                    <input type="date" id="sim-date">
+                </div>
+
+                <button type="button" id="run-btn">Run Simulation</button>
+            </form>
+        </section>
+
+        <div id="visual-center">
+    <div id="con-zone" class="data-zone"></div>
+
+    <div id="skull-container">
+        <img src="skull.svg" alt="Neuro-Skull" id="skull-img"> 
+        <div class="eye left-eye"></div>
+        <div class="eye right-eye"></div>
+        <div id="synapse-field"></div> 
+    </div>
+
+    <div id="pro-zone" class="data-zone"></div>
+</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
